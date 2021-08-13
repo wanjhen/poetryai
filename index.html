@@ -27,10 +27,11 @@
         <article>
           <div class="home-content wrapper">
             <h2 align="center">~AI讀懂你的心~</h2>
-            <input type="text" placeholder="請輸入關鍵字(一字為限)">
+            <input type="text" id="keyin" placeholder="請輸入關鍵字(一字為限)">
             <br>
-            <input type="submit" value="生成">
+            <input type="submit" value="生成" onclick="submit()">
             <br>
+            <p>生成結果: <span id="resultText"></span></p>
             <br>
             <br>
             <h2 align="center">訓練資料集取自以下詩人，感謝他們創造許多膾炙人口的詩詞</h2>
