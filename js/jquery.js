@@ -1,32 +1,32 @@
 function postData(url, data) {
   return fetch(url, {
     body: JSON.stringify(data),
-    cache: 'no-cache',
-    credentials: 'same-origin',
-    headers {
-      'user-agent': 'Example',
-      'content-type': 'application/json'
+    cache: "no-cache",
+    credentials: "same-origin",
+    headers: {
+      "user-agent": "Example",
+      "content-type": "application/json"
     },
-    method: 'POST',
-    mode: 'cors',
-    redirect: 'follow',
-    referrer: 'no-referrer',
+    method: "POST",
+    mode: "cors",
+    redirect: "follow",
+    referrer: "no-referrer",
   })
     .then(response => response.json())
 }
 
 function submit(){
-  const keyin = document.getElementById('keyin').value;
+  const keyin = document.getElementById("keyin").value;
   
-  const data ={
+  const data = {
     keyin
   }
   
-  postData('https://wanjhen.github.io/poetryai/', data)
+  postData("https://wanjhen.github.io/poetryai/", data)
   .then(data=>{
     const result = data.result;
     //console.log(result);
-    document.getElementById('resultText').innerHTML=result;
+    document.getElementById("resultText").innerHTML=result;
   })
 }
 
