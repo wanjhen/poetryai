@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/*whole*/
+html {
+  font-size: 100%;
+}
+body {
+  background:linear-gradient(top,#ffffff,rgba(51,51,51,0.2)),url(../images/flower.jpg);
+  background:-moz-linear-gradient(top,#ffffff,rgba(51,51,51,0.2)),url(../images/flower.jpg);
+  background:-webkit-linear-gradient(top,#ffffff,rgba(51,51,51,0.2)),url(../images/flower.jpg);
+}
+.page-header {
+  justify-content: space-between;
+}
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+nav {
+  font-size: 10px;
+}
+a {
+  text-decoration: none;
+  font-family: cursive;
+  color: teal;
+  font-size: 20px;
+}
+h1 { /*background: white;
+     padding: 40px;*/
+     color: #5f9ea0;
+     font-family: cursive;
+}
+h2 {
+  color: teal;
+  font-family: cursive;
+  font-size: 1.3rem;
+  font-weight: lighter;
+}
+h3 {
+  color: teal;
+  font-family: fantasy;
+  font-size: 20px;
+  font-weight: lighter;
+}
+p {
+  background-color: aliceblue;
+  color: teal;
+  font-family: cursive;
+  font-size: 16px;
+  /*text-align: justify;
+  text-justify:inter-ideograph;*/
+}
+footer {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+/*insert*/
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: cursive;
+  font-size: 20px;
+  color: #5f9ea0;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  font-size: 1.125rem;
+}
+input[type="text"],
+input[type="email"] {
+  border: none;
+  width: 100%;
+  max-width: 480px;
+}
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+}
+input[type="submit"] {
+  font-family: cursive;
+  color: #5f9ea0;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/*form*/
+form div {
+  margin-bottom: 14px;
+}
+label {
+  color: teal;
+  font-family: cursive;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* home */
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10.6%;
+}
+
+/*contact*/
+.contact-content {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 6.4%;
+}
+/*整體的比例*/
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  /*text-align: center;
+  font-size: 18px;
+  background: #fff;*/
+
+  /* Center slide text vertically 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;*/
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/*圖片的比例*/
+.swiper-slide img {
+  display: block;
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
