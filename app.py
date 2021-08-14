@@ -7,6 +7,17 @@ from flask_cors import CORS
 app=Flask(__name__) #__name__代表目前執行的模組
 CORS(app)
 
+@app.route("/") #函式的裝飾
+def index():
+    return render_template("index.html")
+def postInput():
+    # 取得前端傳過來的數值
+    insertValues = request.get_json()
+    heading = insertValues['keyin']
+    result = poet.get_hidden_poetry(heading)
+    return jsonify(result)
+    
+"""
 @app.route("/", methods=["POST"]) #函式的裝飾
 def index():
     # 取得前端傳過來的數值
@@ -15,11 +26,6 @@ def index():
     result = poet.get_hidden_poetry(heading)
     return render_template("index.html") + jsonify(result)
     #return render_template("index.html")
-    
-"""
-@app.route("/") #函式的裝飾
-def index():
-    return render_template("index.html")
 
 @app.route("/post_submit", methods=['GET', 'POST'])
 def submit():
