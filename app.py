@@ -21,7 +21,8 @@ def index():
     #return render_template("index.html")
     
 """
-@app.route('/predict', methods=["POST"])
+
+@app.route("/", methods=["POST"])
 def postInput():
     # 取得前端傳過來的數值
     insertValues = request.get_json()
