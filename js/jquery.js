@@ -1,18 +1,19 @@
 function postData(url, data) {
+  // Default options are marked with *
   return fetch(url, {
-    body: JSON.stringify(data),
-    cache: 'no-cache',
-    credentials: 'same-origin',
+    body: JSON.stringify(data), // must match 'Content-Type' header
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, same-origin, *omit
     headers: {
-      'user-agent': 'Example',
+      'user-agent': 'Mozilla/4.0 MDN Example',
       'content-type': 'application/json'
     },
-    method: 'POST',
-    mode: 'cors',
-    redirect: 'follow',
-    referrer: 'no-referrer',
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, cors, *same-origin
+    redirect: 'follow', // manual, *follow, error
+    referrer: 'no-referrer', // *client, no-referrer
   })
-    .then(response => response.json())
+  .then(response => response.json()) // 輸出成 json
 }
 
 function submit(){
@@ -25,7 +26,7 @@ function submit(){
   postData('https://wanjhen.github.io/poetryai/', data)
   .then(data=>{
     const result = data.result;
-    //console.log(result);
+    console.log(result);
     document.getElementById('resultText').innerHTML=result;
   })
 }
