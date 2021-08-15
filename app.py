@@ -10,14 +10,13 @@ CORS(app)
 @app.route("/") #函式的裝飾
 def index():
     return render_template("index.html")
+"""
 def postInput():
     # 取得前端傳過來的數值
     insertValues = request.get_json()
     heading = insertValues['keyin']
     result = poet.get_hidden_poetry(heading)
     return jsonify(result)
-    
-"""
 @app.route("/", methods=["POST"]) #函式的裝飾
 def index():
     # 取得前端傳過來的數值
@@ -26,24 +25,22 @@ def index():
     result = poet.get_hidden_poetry(heading)
     return render_template("index.html") + jsonify(result)
     #return render_template("index.html")
-
 @app.route("/post_submit", methods=['GET', 'POST'])
 def submit():
     if request.method == 'POST':
         insertValues = request.get_json()
         heading = insertValues['keyin']
         result = poet.get_hidden_poetry(heading)
-        return jsonify(result) + request.form.get('keyin')    
+        return jsonify(result) 
     return render_template('post_submit.html')
-
-@app.route("/", methods=["POST"])
+"""
+@app.route("/predict", methods=["POST"])
 def postInput():
     # 取得前端傳過來的數值
     insertValues = request.get_json()
     heading = insertValues['keyin']
     result = poet.get_hidden_poetry(heading)
     return jsonify(result)
-"""
 
 if __name__=="__main__": #如果以主程式執行
     app.run(debug=True) #立刻啟動伺服器

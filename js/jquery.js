@@ -23,7 +23,7 @@ function submit(){
     keyin
   }
   
-  postData('https://wanjhen.github.io/poetryai/', data)
+  postData('https://wanjhen.github.io/poetryai/predict', data)
   .then(data=>{
     const result = data.result;
     console.log(result);
